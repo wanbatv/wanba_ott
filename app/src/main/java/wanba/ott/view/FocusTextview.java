@@ -7,9 +7,6 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-/**
- * Created by ÓáÑÇéª on 2015/5/25.
- */
 public class FocusTextview extends TextView {
     public FocusTextview(Context context) {
         super(context);

@@ -23,7 +23,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp">
-        <ImageView
+        <wanba.ott.util.XCRoundImageView
             android:id="@+id/weixin_image_user_portrait"
             android:layout_width="48dp"
             android:layout_height="48dp"

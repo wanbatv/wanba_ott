@@ -61,7 +61,7 @@
             android:orientation="vertical"
              >
 
-            <TextView
+            <wanba.ott.view.FocusTextview
                 android:id="@+id/sport_item1"
                 android:layout_width="253dp"
                 android:layout_height="43dp"
@@ -70,9 +70,10 @@
                 android:layout_marginTop="60dp"
                 android:gravity="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:focusable="true"/>
 
-            <TextView
+            <wanba.ott.view.FocusTextview
                 android:id="@+id/sport_item2"
                 android:layout_width="253dp"
                 android:layout_height="43dp"
@@ -80,9 +81,10 @@
                 android:layout_marginStart="15dp"
                 android:gravity="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:focusable="true"/>
 
-            <TextView
+            <wanba.ott.view.FocusTextview
                 android:id="@+id/sport_item3"
                 android:layout_width="253dp"
                 android:layout_height="43dp"
@@ -90,17 +92,20 @@
                 android:layout_marginStart="15dp"
                 android:gravity="center"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:focusable="true"/>
+            <wanba.ott.view.FocusTextview
+                android:id="@+id/sport_item4"
+                android:layout_width="253dp"
+                android:layout_height="43dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:focusable="true"/>
 
-            <wanba.ott.view.FocusImageButtonView
-                android:id="@+id/more_record"
-                android:layout_width="157dp"
-                android:layout_height="41dp"
-                android:layout_marginLeft="63dp"
-                android:layout_marginStart="63dp"
-                android:layout_marginTop="2dp"
-                android:scaleType="fitXY"
-                android:visibility="gone"/>
+
         </LinearLayout>
     </LinearLayout>
 
@@ -118,6 +123,8 @@
             android:focusable="true"
             android:scaleType="fitCenter"
             android:background="@drawable/imageview_shape"
+            android:nextFocusUp="@id/reco_text"
+            android:nextFocusLeft="@id/daily_card"
            />
 
         <ImageView
@@ -129,7 +136,7 @@
             android:focusable="true"
             android:scaleType="fitCenter"
             android:background="@drawable/imageview_shape"
-             />
+            android:nextFocusUp="@id/reco_text" />
 
         <ImageView
             android:layout_width="287dp"
@@ -140,7 +147,7 @@
             android:focusable="true"
             android:scaleType="fitCenter"
             android:background="@drawable/imageview_shape"
-            />
+            android:nextFocusUp="@id/reco_text"/>
 
         <ImageView
             android:layout_width="287dp"
