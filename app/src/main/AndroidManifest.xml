@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="wanba.ott.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+	
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" 
+        />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".PlayerActivity"
+            android:label="@string/title_activity_player" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MikeLingActivity"
+            android:label="@string/title_activity_mike_ling" >
+        </activity>
+        <activity
+            android:name=".BBTiaoActivity"
+            android:label="@string/title_activity_bbtiao" >
+        </activity>
+        <activity
+            android:name=".YujiaActivity"
+            android:label="@string/title_activity_yujia" >
+        </activity>
+        <activity
+            android:name=".SimplePlayerActivity"
+            android:label="@string/title_activity_simple_player" >
+        </activity>
+        <activity
+            android:name=".UserCenterActivity"
+            android:label="@string/title_activity_user_center" >
+        </activity>
+        <activity
+            android:name=".CommentActivity"
+            android:label="@string/title_activity_comment" >
+        </activity>
+        <activity
+            android:name=".ZhengdyActivity"
+            android:label="@string/title_activity_zhengdy" >
+        </activity>
+        <activity
+            android:name=".AlbumActivity"
+            android:label="@string/title_activity_album" >
+        </activity>
+        <activity
+            android:name=".AlbumFullScreenActivity"
+            android:label="@string/title_activity_album_full_screen" >
+        </activity>
+        <activity android:name=".OrderActivity"
+            android:label="订购">
+            <intent-filter>
+                <action android:name="com.wanba.ott.intent.ORDER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MikeLingChannelActivity">
+            <intent-filter>
+                <action android:name="com.wanba.ott.intent.MIKELING_CHANNEL" />
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".YogaChannelActivity">
+            <intent-filter>
+                <action android:name="com.wanba.ott.intent.YOGO_CHANNEL" />
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RuijianChannelActivity">
+            <intent-filter>
+                <action android:name="com.wanba.ott.intent.RUIJIAN_CHANNEL" />
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WangguangchengChannelActivity">
+            <intent-filter>
+                <action android:name="com.wanba.ott.intent.WANGGUANGCHEGN_CHANNEL" />
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

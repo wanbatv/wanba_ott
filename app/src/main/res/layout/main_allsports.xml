@@ -1,0 +1,218 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hsView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <wanba.ott.view.FocusImageView
+                android:id="@+id/first_sport"
+                android:layout_width="550dp"
+                android:layout_height="244dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/imageview_shape"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_gray" />
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="451dp"
+                android:layout_marginStart="451dp"
+                android:layout_marginTop="206dp"
+                android:background="@drawable/peoplewatch_btn"
+                android:gravity="center_vertical|center"
+                android:text="2548" />
+
+            <wanba.ott.view.FocusImageView
+                android:layout_width="166dp"
+                android:layout_height="244dp"
+                android:layout_marginLeft="595dp"
+                android:layout_marginStart="595dp"
+                android:background="@drawable/imageview_shape"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_gray" />
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="612dp"
+                android:layout_marginStart="612dp"
+                android:layout_marginTop="206dp"
+                android:background="@drawable/peoplewatch_btn"
+                android:gravity="center_vertical|center"
+                android:text="2548" />
+
+            <wanba.ott.view.FocusImageView
+                android:layout_width="381dp"
+                android:layout_height="244dp"
+                android:layout_marginLeft="766dp"
+                android:layout_marginStart="766dp"
+                android:background="@drawable/imageview_shape"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_gray" />
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="780dp"
+                android:layout_marginStart="780dp"
+                android:layout_marginTop="206dp"
+                android:background="@drawable/peoplewatch_btn"
+                android:gravity="center_vertical|center"
+                android:text="2548" />
+
+            <wanba.ott.view.FocusImageView
+                android:layout_width="381dp"
+                android:layout_height="244dp"
+                android:layout_marginLeft="1151dp"
+                android:layout_marginStart="1151dp"
+                android:background="@drawable/imageview_shape"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_gray" />
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="1390dp"
+                android:layout_marginStart="1390dp"
+                android:layout_marginTop="206dp"
+                android:background="@drawable/peoplewatch_btn"
+                android:gravity="center_vertical|center"
+                android:text="2548" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false" >
+
+            <wanba.ott.view.FocusImageView
+                android:layout_width="166dp"
+                android:layout_height="244dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/imageview_shape"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_gray" />
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="206dp"
+                android:background="@drawable/peoplewatch_btn"
+                android:gravity="center_vertical|center"
+                android:text="2548" />
+
+            <wanba.ott.view.FocusImageView
+                android:layout_width="381dp"
+                android:layout_height="244dp"
+                android:layout_marginLeft="208dp"
+                android:layout_marginStart="208dp"
+                android:background="@drawable/imageview_shape"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_gray" />
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="218dp"
+                android:layout_marginStart="218dp"
+                android:layout_marginTop="206dp"
+                android:background="@drawable/peoplewatch_btn"
+                android:gravity="center_vertical|center"
+                android:text="2548" />
+
+            <wanba.ott.view.FocusImageView
+                android:layout_width="381dp"
+                android:layout_height="244dp"
+                android:layout_marginLeft="595dp"
+                android:layout_marginStart="595dp"
+                android:background="@drawable/imageview_shape"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_gray" />
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="823dp"
+                android:layout_marginStart="823dp"
+                android:layout_marginTop="206dp"
+                android:background="@drawable/peoplewatch_btn"
+                android:gravity="center_vertical|center"
+                android:text="2548" />
+
+            <wanba.ott.view.FocusImageView
+                android:layout_width="381dp"
+                android:layout_height="244dp"
+                android:layout_marginLeft="982dp"
+                android:layout_marginStart="982dp"
+                android:background="@drawable/imageview_shape"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_gray" />
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="1000dp"
+                android:layout_marginStart="1000dp"
+                android:layout_marginTop="206dp"
+                android:background="@drawable/peoplewatch_btn"
+                android:gravity="center_vertical|center"
+                android:text="2548" />
+
+            <wanba.ott.view.FocusImageView
+                android:layout_width="166dp"
+                android:layout_height="244dp"
+                android:layout_marginLeft="1370dp"
+                android:layout_marginStart="1370dp"
+                android:background="@drawable/imageview_shape"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_gray" />
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="1390dp"
+                android:layout_marginStart="1390dp"
+                android:layout_marginTop="206dp"
+                android:background="@drawable/peoplewatch_btn"
+                android:gravity="center_vertical|center"
+                android:text="2548" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</HorizontalScrollView>

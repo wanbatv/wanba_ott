@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:test="http://schemas.android.com/apk/res/wanba.ott.activity"
+    android:id="@+id/photo_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <wanba.ott.view.FocusImageView
+        android:id="@+id/p_imageView2"
+        android:layout_width="225dp"
+        android:layout_height="440dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/focus"
+        test:borderColor="#FFFF00" />
+
+    <wanba.ott.view.FocusImageView
+        android:id="@+id/p_imageView3"
+        android:layout_width="225dp"
+        android:layout_height="440dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/focus"
+        test:borderColor="#FFFF00" />
+
+    <wanba.ott.view.FocusImageView
+        android:id="@+id/p_imageView4"
+        android:layout_width="225dp"
+        android:layout_height="440dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/focus"
+        test:borderColor="#FFFF00" />
+
+    <wanba.ott.view.FocusImageView
+        android:id="@+id/p_imageView1"
+        android:layout_width="225dp"
+        android:layout_height="440dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/focus"
+        test:borderColor="#FFFF00" />
+
+</LinearLayout>

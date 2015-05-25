@@ -1,0 +1,85 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android" 
+    >
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="157dp"
+        android:layout_marginTop="101dp"
+        android:text="User0001" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="142dp"
+        android:layout_marginTop="58.5dp"
+        android:text="0小时0分0秒" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-100dp"
+        android:layout_marginTop="101dp"
+        android:text="100卡" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="157dp"
+        android:layout_marginTop="57.5dp"
+        android:text="10" />
+
+    <wanba.ott.view.FocusImageView
+        android:id="@+id/iv_card"
+        android:layout_width="135.5dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="-93dp"
+        android:layout_marginTop="99dp"
+        android:src="@drawable/focus" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="187dp"
+        android:layout_marginTop="101dp"
+        android:text="29" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="78dp"
+        android:text="一定要努力，今天体重到了新低" />
+
+    <!--
+        <TextView
+        android:id="@+id/textView11"
+        style="@style/textViewStyle"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="157dp"
+        android:layout_marginTop="123dp"
+        android:text="11-03 11:15" />
+    -->
+
+    <wanba.ott.view.FocusImageView
+        android:id="@+id/iv_comm"
+        android:layout_width="128dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="96.5dp"
+        android:src="@drawable/focus" />
+
+</merge>

@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_h_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    tools:context="${relativePackage}.${activityClass}"
+     >
+
+    <LinearLayout
+        android:layout_width="464dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="424dp"
+        android:layout_marginStart="424dp"
+        android:layout_marginTop="126dp"
+        android:orientation="vertical" >
+
+        <VideoView
+            android:id="@+id/yj_trailer"
+            android:layout_width="530dp"
+            android:layout_height="310dp"
+             />
+
+        <GridView
+            android:id="@+id/yj_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:columnWidth="210dp"
+            android:horizontalSpacing="40dp"
+            android:numColumns="2"
+            android:verticalSpacing="15dp" >
+        </GridView>
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/nav_btn_layout" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="185dp"
+        android:layout_marginStart="185dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/yj_textView1"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="-154dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/yj_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="112dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="-112dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/yj_textView3"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="83dp"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="-45dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <wanba.ott.view.FocusImageView
+            android:id="@+id/yj_imageView1"
+            android:layout_width="160dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/focus" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">玩吧</string>
+    <string name="title_activity_play">PlayActivity</string>
+    <string name="title_activity_player">PlayerActivity</string>
+    <string name="title_activity_mike_ling">MikeLingActivity</string>
+    <string name="title_activity_bbtiao">BBTiaoActivity</string>
+    <string name="title_activity_yujia">YujiaActivity</string>
+    <string name="title_activity_simple_player">SimplePlayerActivity</string>
+    <string name="title_activity_user_center">UserCenterActivity</string>
+    <string name="title_activity_comment">CommentActivity</string>
+    <string name="title_activity_zhengdy">ZhengdyActivity</string>
+    <string name="info_loading">视频加载中</string>
+    <string name="info_exit">再按一次退出播放</string>
+    <string name="exit">再按一次退出</string>
+    <string name="title_activity_album">AlbumActivity</string>
+
+    <!-- 获取json数据，视频数据的url地址 -->
+    <string name="play_url">http://live.3gv.ifeng.com/live/hongkong.m3u8</string>
+    <string name="mikeling_url">http://121.201.7.173/video/9.m3u8</string>
+    <string name="ott_content">http://121.201.7.173:8080/wanba_shzg/ott_content.jsp</string>
+    <string name="weixin_pic_json_url">http://121.201.7.173:8080/wanba_shzg/ott_weixin_photo.jsp</string>
+    <string name="apk_update_json_url">http://121.201.7.173:8080/wanba_shzg/apk_update.jsp</string>
+    <string name="user_json_url">http://121.201.7.173:8080/wanba_shzg/ott_user.jsp</string>
+    <string name="main_json_url">http://121.201.7.173:8080/wanba_shzg/ott_main.jsp</string>
+    <string name="start_report_url">http://121.201.7.173:8080/wanba_shzg/start_play.jsp</string>
+    <string name="end_report_url">http://121.201.7.173:8080/wanba_shzg/end_play.jsp</string>
+
+    <!-- 新版玩吧string -->
+    <string name="main_recommend">热门推荐</string>
+    <string name="main_all_sports">全部运动</string>
+    <string name="main_person_center">个人中心</string>
+    <string name="loading_text">页面信息加载中\.\.\.</string>
+    <string name="title_activity_album_full_screen">AlbumFullScreenActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="127dp"
+        android:layout_marginStart="127dp"
+        android:drawableBottom="@drawable/line"
+        android:text="@string/main_recommend"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:alpha="0.6"
+        android:text="@string/main_all_sports"
+        android:textColor="#FFFFFF"
+        android:textSize="24.5sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:alpha="0.6"
+        android:text="@string/main_person_center"
+        android:textColor="#FFFFFF"
+        android:textSize="24.5sp" />
+
+    <DigitalClock
+        android:id="@+id/digitalClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="332dp"
+        android:layout_marginStart="332dp"
+        android:text="DigitalClock" />
+
+
+    
+   
+    
+</LinearLayout>
