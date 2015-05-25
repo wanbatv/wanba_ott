@@ -231,6 +231,11 @@ public class YogaChannelActivity extends BaseChannelActivity implements ViewPage
                             SimplePlayerActivity.class, null)
                             .setProductCode(item.productCode)
                             .setTranId(item.tranId)
+                            .setNeedAuth(true)
+                            .setOrderPrimaryButtonBackground(getResources().getDrawable(
+                                    R.drawable.order_wizzard_primary_btn_bg_yoga))
+                            .setOrderSecondaryButtonBackground(getResources().getDrawable(
+                                    R.drawable.order_wizzard_secondary_btn_bg_yoga))
                             .onClick(v);
                 }
             });

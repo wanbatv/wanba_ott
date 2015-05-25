@@ -253,6 +253,11 @@ public class MikeLingChannelActivity extends BaseChannelActivity implements View
                             SimplePlayerActivity.class, null)
                             .setProductCode(item.productCode)
                             .setTranId(item.tranId)
+                            .setNeedAuth(true)
+                            .setOrderPrimaryButtonBackground(getResources().getDrawable(
+                                    R.drawable.order_wizzard_primary_btn_bg_mikeling))
+                            .setOrderSecondaryButtonBackground(getResources().getDrawable(
+                                    R.drawable.order_wizzard_secondary_btn_bg_mikeling))
                             .onClick(v);
                 }
             });

@@ -231,6 +231,11 @@ public class WangguangchengChannelActivity extends BaseChannelActivity implement
                             SimplePlayerActivity.class, null)
                             .setProductCode(item.productCode)
                             .setTranId(item.tranId)
+                            .setNeedAuth(true)
+                            .setOrderPrimaryButtonBackground(getResources().getDrawable(
+                                    R.drawable.order_wizzard_primary_btn_bg_wgc))
+                            .setOrderSecondaryButtonBackground(getResources().getDrawable(
+                                    R.drawable.order_wizzard_secondary_btn_bg_wgc))
                             .onClick(v);
                 }
             });
