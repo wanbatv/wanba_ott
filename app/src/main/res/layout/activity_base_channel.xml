@@ -3,8 +3,7 @@
     android:id="@+id/channel_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/demo_background">
+    android:orientation="vertical">
     <FrameLayout
         android:id="@+id/channel_header"
         android:layout_width="match_parent"
@@ -12,14 +11,12 @@
         <ImageView
             android:id="@+id/channel_header_flag"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/demo_header_flag"/>
+            android:layout_height="wrap_content"/>
         <ImageView
             android:id="@+id/channel_header_portrait"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:src="@drawable/demo_header_portrait"
             android:layout_marginRight="16dp"
             android:layout_marginTop="16dp"/>
     </FrameLayout>

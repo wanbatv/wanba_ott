@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
 
 import com.android.volley.Response;
@@ -29,6 +31,9 @@ public class OpenActivityAction implements View.OnClickListener {
 
 	private String mProductCode = null;
 	private String mTranId = null;
+	private boolean mNeedAuth = false;
+	private Drawable mOrderPrimaryButtonBackground = null;
+	private Drawable mOrderSecondaryButtonBackground = null;
 
 	public OpenActivityAction(Context context, Class activityClass,
 			Map<String, String> params) {
@@ -40,6 +45,33 @@ public class OpenActivityAction implements View.OnClickListener {
 	public OpenActivityAction(Context context, Class activityClass) {
 		this.activityClass = activityClass;
 		this.context = context;
+	}
+
+	public OpenActivityAction setOrderPrimaryButtonBackground(Drawable drawable) {
+		mOrderPrimaryButtonBackground = drawable;
+		return this;
+	}
+
+	public Drawable getOrderPrimaryButtonBackground() {
+		return mOrderPrimaryButtonBackground;
+	}
+
+	public OpenActivityAction setOrderSecondaryButtonBackground(Drawable drawable) {
+		mOrderSecondaryButtonBackground = drawable;
+		return this;
+	}
+
+	public Drawable getOrderSecondaryButtonBackground() {
+		return mOrderSecondaryButtonBackground;
+	}
+
+	public OpenActivityAction setNeedAuth(boolean needAuth) {
+		mNeedAuth = needAuth;
+		return this;
+	}
+
+	public boolean isNeedAuth() {
+		return mNeedAuth;
 	}
 
 	public OpenActivityAction setProductCode(String productCode) {
@@ -62,6 +94,18 @@ public class OpenActivityAction implements View.OnClickListener {
 
 	@Override
 	public void onClick(final View v) {
+		if (!mNeedAuth) {
+			Intent intent = new Intent(context, activityClass);
+
+			if (params != null) {
+				for (String str : params.keySet()) {
+					intent.putExtra(str, params.get(str));
+				}
+			}
+			context.startActivity(intent);
+			return;
+		}
+
 		String url = UrlUtils.getAuthUrl(mProductCode, mTranId);
 		JsonObjectRequest request = new JsonObjectRequest(url, null, new Response.Listener<JSONObject>() {
 			@Override
@@ -113,7 +157,15 @@ public class OpenActivityAction implements View.OnClickListener {
 										}
 									}
 								});
+
+								if (mOrderPrimaryButtonBackground != null) {
+									ImageView imgPrimaryBtnBg = (ImageView) contentView.findViewById(
+											R.id.channel_order_wizzard_primary_btn_background);
+									imgPrimaryBtnBg.setImageDrawable(mOrderPrimaryButtonBackground);
+								}
+
 								View primaryButton = contentView.findViewById(R.id.channel_order_wizzard_btn_primary);
+								primaryButton.requestFocus();
 								primaryButton.setOnClickListener(new View.OnClickListener() {
 									@Override
 									public void onClick(View v) {
@@ -136,6 +188,13 @@ public class OpenActivityAction implements View.OnClickListener {
 										}
 									}
 								});
+
+								if (mOrderSecondaryButtonBackground != null) {
+									ImageView imgSecondaryBtnBg = (ImageView) contentView.findViewById(
+											R.id.channel_order_wizzard_secondary_btn_background);
+									imgSecondaryBtnBg.setImageDrawable(mOrderSecondaryButtonBackground);
+								}
+
 								View secondaryButton = contentView.findViewById(R.id.channel_order_wizzard_btn_secondary);
 								secondaryButton.setOnClickListener(new View.OnClickListener() {
 									@Override

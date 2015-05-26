@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+    <ImageView
+        android:id="@+id/channel_mikeling_tab_jtjs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/channel_mikeling_tab_jtjs"
+        android:focusable="true"
+        android:layout_marginRight="8dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/channel_mikeling_header_tab_divider"/>
+    <ImageView
+        android:id="@+id/channel_mikeling_tab_sfzjf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/channel_mikeling_tab_sfzjf"
+        android:focusable="true"/>
+</LinearLayout>

@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="channel_pager_indicator_offset">248dp</dimen>
+    <dimen name="channel_mikeling_header_tab_margin_top">72dp</dimen>
+    <dimen name="channel_mikeling_header_tab_margin_left">140dp</dimen>
+    <dimen name="channel_zdy_item_width">240dp</dimen>
+    <dimen name="channel_zdy_item_height">515dp</dimen>
+    <dimen name="channel_zdy_item_inner_width">225dp</dimen>
+    <dimen name="channel_zdy_item_inner_height">440dp</dimen>
+    <dimen name="channel_zdy_item_border_offset_left">15dp</dimen>
+    <dimen name="channel_zdy_item_border_offset_top">21dp</dimen>
+    <dimen name="channel_zdy_item_border_offset_bottom">55dp</dimen>
 </resources>

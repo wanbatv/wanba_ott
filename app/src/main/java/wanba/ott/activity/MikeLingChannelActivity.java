@@ -11,7 +11,9 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
@@ -110,10 +112,42 @@ public class MikeLingChannelActivity extends BaseChannelActivity implements View
      */
     @Override
     protected void onBuildHeader(ViewGroup contentView) {
-        ImageView headerFlag = (ImageView) contentView.findViewById(R.id.channel_header_flag);
+        FrameLayout header = (FrameLayout) contentView.findViewById(R.id.channel_header);
+
+        ImageView headerFlag = (ImageView) header.findViewById(R.id.channel_header_flag);
         headerFlag.setImageResource(R.drawable.channel_mikeling_header_flag);
-        ImageView headerPortrait = (ImageView) contentView.findViewById(R.id.channel_header_portrait);
+        ImageView headerPortrait = (ImageView) header.findViewById(R.id.channel_header_portrait);
         headerPortrait.setImageResource(R.drawable.channel_mikeling_header_portrait);
+
+        LinearLayout tabBarContainer = (LinearLayout) LayoutInflater.from(this).inflate(
+                R.layout.channel_mikeling_header_tab_bar, null);
+
+        final View tabJtjs = tabBarContainer.findViewById(R.id.channel_mikeling_tab_jtjs);
+        final View tabSfzjf = tabBarContainer.findViewById(R.id.channel_mikeling_tab_sfzjf);
+        tabJtjs.setSelected(true);
+        tabJtjs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tabJtjs.setSelected(true);
+                tabSfzjf.setSelected(false);
+                tabJtjs.requestFocus();
+            }
+        });
+
+        tabSfzjf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tabJtjs.setSelected(false);
+                tabSfzjf.setSelected(true);
+                tabSfzjf.requestFocus();
+            }
+        });
+
+        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+        lp.leftMargin = getResources().getDimensionPixelSize(R.dimen.channel_mikeling_header_tab_margin_left);
+        lp.topMargin = getResources().getDimensionPixelSize(R.dimen.channel_mikeling_header_tab_margin_top);
+        header.addView(tabBarContainer, lp);
     }
 
     @Override

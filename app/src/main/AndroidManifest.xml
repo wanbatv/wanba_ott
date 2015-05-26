@@ -109,6 +109,30 @@
                 <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".BengbengtiaoChannelActivity">
+            <intent-filter>
+                <action android:name="com.wanba.ott.intent.BENGBENGTIAO_CHANNEL" />
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".JianshencaoChannelActivity">
+            <intent-filter>
+                <action android:name="com.wanba.ott.intent.JIANSHENCAO_CHANNEL" />
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DupiwuChannelActivity">
+            <intent-filter>
+                <action android:name="com.wanba.ott.intent.Dupiwu_CHANNEL" />
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".JiewuChannelActivity">
+            <intent-filter>
+                <action android:name="com.wanba.ott.intent.JIEWU_CHANNEL" />
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

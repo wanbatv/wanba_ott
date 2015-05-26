@@ -421,46 +421,57 @@ public class AlbumActivity extends FullScreenActivity {
 			jsonArray = response.getJSONArray("photos");
 			PhotoItem[] photoItems = null;
 			final int photoSize = jsonArray.length();
+			photoItems = new PhotoItem[photoSize + 1];
+			JSONObject qrObject = response.getJSONObject("qrcode");
+			PhotoItem qrItem = new PhotoItem();
+			qrItem.iconUrl = qrObject.getString("img");
+			photoItems[0] = qrItem;
+
 			if (photoSize > 0) {
-				photoItems = new PhotoItem[photoSize];
 				String[] urls = new String[photoSize];
 				final ArrayList<String> listUrls = new ArrayList<String>();
-				for (int i = 0; i < urls.length; i++) {
+				for (int i = 0; i < photoItems.length; i++) {
 					final int position = i;
-					JSONObject obj = jsonArray.getJSONObject(i);
-					PhotoItem pi = new PhotoItem();
-					if (obj.has("userId")) {
-						pi.userId = obj.getString("userId");
-					}
-					if (obj.has("datetime")) {
-						pi.datetime = obj.getString("datetime");
-					}
-					if (obj.has("imageUrl")) {
-						pi.iconUrl = obj.getString("imageUrl");
-					}
-					if (!TextUtils.isEmpty(pi.iconUrl)) {
-						pi.imageUrl = pi.iconUrl.replace("icon_", "");
-					}
+					PhotoItem pi = null;
+					if (i > 0) {
+						JSONObject obj = jsonArray.getJSONObject(i - 1);
+						pi = new PhotoItem();
+						if (obj.has("userId")) {
+							pi.userId = obj.getString("userId");
+						}
+						if (obj.has("datetime")) {
+							pi.datetime = obj.getString("datetime");
+						}
+						if (obj.has("imageUrl")) {
+							pi.imageUrl = obj.getString("imageUrl");
+						}
+						if (obj.has("img")) {
+							pi.iconUrl = obj.getString("img");
+						}
 
-					listUrls.add(pi.imageUrl);
+						listUrls.add(pi.imageUrl);
 
-					if (userItems != null && userItems.length > 0) {
-						final int tempUserSize = userItems.length;
-						for (int j = 0; j < tempUserSize; j++) {
-							UserItem ui = userItems[j];
-							if (ui.id.equals(pi.userId)) {
-								pi.userPortraitUrl = ui.portraitUrl;
-								break;
+						if (userItems != null && userItems.length > 0) {
+							final int tempUserSize = userItems.length;
+							for (int j = 0; j < tempUserSize; j++) {
+								UserItem ui = userItems[j];
+								if (ui.id.equals(pi.userId)) {
+									pi.userPortraitUrl = ui.portraitUrl;
+									break;
+								}
 							}
 						}
-					}
 
-					photoItems[i] = pi;
+						photoItems[i] = pi;
+					} else {
+						pi = photoItems[0];
+					}
 
 					View imageItemView = LayoutInflater.from(this).inflate(R.layout.weixin_album_image_item, null);
 					View focusFrame = imageItemView.findViewById(R.id.weixin_image_focus_frame);
 					ImageView imageView = (ImageView) imageItemView.findViewById(R.id.weixin_image);
 					if (position > 0) {
+						final int pos = position - 1;
 						focusFrame.setOnClickListener(new View.OnClickListener() {
 							@Override
 							public void onClick(View v) {
@@ -468,7 +479,7 @@ public class AlbumActivity extends FullScreenActivity {
 										AlbumActivity.this,
 										AlbumFullScreenActivity.class);
 								intent.putExtra("position",
-										position);
+										pos);
 								intent.putStringArrayListExtra(
 										"urls", listUrls);
 								startActivity(intent);

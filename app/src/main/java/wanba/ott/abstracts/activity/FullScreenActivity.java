@@ -1,12 +1,5 @@
 package wanba.ott.abstracts.activity;
 
-import java.io.File;
-
-import org.json.JSONObject;
-
-import wanba.ott.activity.OpenActivityAction;
-import wanba.ott.util.AppUtil;
-import wanba.ott.util.AppUtil.STB;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,6 +14,14 @@ import android.widget.VideoView;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+
+import org.json.JSONObject;
+
+import java.io.File;
+
+import wanba.ott.activity.OpenActivityAction;
+import wanba.ott.util.AppUtil;
+import wanba.ott.util.AppUtil.STB;
 
 /**
  * app的基类 1.设置整个app的一些界面方面的参数 2.初始化一些app功能性方面的对象。

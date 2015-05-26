@@ -250,14 +250,15 @@ public class ZhengdyActivity extends FullScreenActivity {
 
 		private View createItemView(Context context, int position) {
 			FrameLayout frame = new FrameLayout(context);
-			final int padding = (int) (12 * context.getResources().getDisplayMetrics().density);
+			final int padding = (int) (4 * context.getResources().getDisplayMetrics().density);
 			frame.setPadding(padding, padding, padding, padding);
 			FocusImageView imageView = new FocusImageView(context);
 			final ChannelItem item = mChannelItem[position];
 			mImageLoader.get(item.coverUrl, ImageLoader.getImageListener(
 					imageView, R.drawable.logo_gray, R.drawable.logo_gray));
 			FrameLayout.LayoutParams imageViewLp = new FrameLayout.LayoutParams(
-					FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+					context.getResources().getDimensionPixelSize(R.dimen.channel_zdy_item_width),
+					context.getResources().getDimensionPixelSize(R.dimen.channel_zdy_item_height));
 			frame.addView(imageView, imageViewLp);
 			imageView.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -299,7 +300,7 @@ public class ZhengdyActivity extends FullScreenActivity {
 
 			mPaint.setStyle(Paint.Style.STROKE);
 			mPaint.setColor(Color.YELLOW);
-			mPaint.setStrokeWidth(8 * getResources().getDisplayMetrics().density);
+			mPaint.setStrokeWidth(4 * getResources().getDisplayMetrics().density);
 			mR = 24 * getResources().getDisplayMetrics().density;
 		}
 
@@ -311,10 +312,10 @@ public class ZhengdyActivity extends FullScreenActivity {
 				final int w = getMeasuredWidth();
 				final int h = getMeasuredHeight();
 				final float density = getResources().getDisplayMetrics().density;
-				mRect.left = mPaint.getStrokeWidth() / 2;
-				mRect.top = 21 * density;
+				mRect.left = getResources().getDimensionPixelSize(R.dimen.channel_zdy_item_border_offset_left);
+				mRect.top = getResources().getDimensionPixelSize(R.dimen.channel_zdy_item_border_offset_top);
 				mRect.right = w - mPaint.getStrokeWidth() / 2;
-				mRect.bottom = h - 54 * density;
+				mRect.bottom = h - getResources().getDimensionPixelSize(R.dimen.channel_zdy_item_border_offset_bottom);
 
 				canvas.drawRoundRect(mRect, mR, mR, mPaint);
 			}

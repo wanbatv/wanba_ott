@@ -3,16 +3,28 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/channel_order_wizzard_back"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="返回"
-        android:textColor="#ffffffff"
-        android:textSize="48sp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:focusable="true"/>
+        android:layout_marginTop="32dp">
+        <ImageView
+            android:id="@+id/channel_order_wizzard_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_back"
+            android:focusable="true"
+            android:layout_marginRight="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:textColor="#ffffffff"
+            android:textSize="32sp"/>
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,16 +43,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/channel_order_wizzard_btn_primary"
+            <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="9.00元/月"/>
-            <Button
-                android:id="@+id/channel_order_wizzard_btn_secondary"
+                android:layout_marginRight="64dp">
+                <ImageView
+                    android:id="@+id/channel_order_wizzard_primary_btn_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/channel_order_wizzard_btn_primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_wizzard_primary_btn"
+                    android:focusable="true"
+                    android:layout_gravity="bottom|center_horizontal"/>
+            </FrameLayout>
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="19.00元/月"/>
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/channel_order_wizzard_secondary_btn_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/channel_order_wizzard_btn_secondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order_wizzard_secondary_btn"
+                    android:focusable="true"
+                    android:layout_gravity="bottom|center_horizontal"/>
+            </FrameLayout>
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>
