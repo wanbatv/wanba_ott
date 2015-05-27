@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wanba="http://schemas.android.com/apk/res-auto"
     android:id="@+id/zdy_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,6 +31,13 @@
                 android:id="@+id/channel_zdy_view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+            <wanba.ott.view.CursorIndicator
+                android:id="@+id/channel_zdy_pager_cursor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                wanba:ci_radius="8dp"
+                wanba:ci_margin="12dp"
+                android:layout_gravity="bottom|center_horizontal"/>
         </FrameLayout>
     </FrameLayout>
 

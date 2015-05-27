@@ -1,5 +1,16 @@
 <resources> 
     <declare-styleable name="FocusImageView"> 
         <attr name="borderColor" format="color"/> 
-    </declare-styleable> 
+    </declare-styleable>
+
+    <declare-styleable name="CursorIndicator">
+        <!-- 定义游标半径 -->
+        <attr name="ci_radius" format="dimension" />
+        <!-- 定义游标边距 -->
+        <attr name="ci_margin" format="dimension" />
+        <!-- 定义游标正常的颜色 -->
+        <attr name="ci_normalColor" format="color" />
+        <!-- 定义游标高亮的颜色 -->
+        <attr name="ci_highlightColor" format="color" />
+    </declare-styleable>
 </resources>

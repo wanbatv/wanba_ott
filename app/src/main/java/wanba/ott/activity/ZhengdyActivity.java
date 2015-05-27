@@ -29,6 +29,7 @@ import org.json.JSONObject;
 import wanba.ott.abstracts.activity.FullScreenActivity;
 import wanba.ott.util.BitmapCache;
 import wanba.ott.util.ProductInfo;
+import wanba.ott.view.CursorIndicator;
 
 /**
  * 郑多燕 页
@@ -41,6 +42,7 @@ public class ZhengdyActivity extends FullScreenActivity {
 	View cardview;
 
 	private ViewPager mViewPager = null;
+	private CursorIndicator mCursorIndicator = null;
 	private ItemAdapter mItemAdapter = null;
 
 	private TextView z_user_info;
@@ -70,6 +72,25 @@ public class ZhengdyActivity extends FullScreenActivity {
 				UserCenterActivity.class));
 
 		mViewPager = (ViewPager) findViewById(R.id.channel_zdy_view_pager);
+		mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+			@Override
+			public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+			}
+
+			@Override
+			public void onPageSelected(int position) {
+
+			}
+
+			@Override
+			public void onPageScrollStateChanged(int state) {
+				if (state == ViewPager.SCROLL_STATE_IDLE) {
+					mCursorIndicator.setCurrent(mViewPager.getCurrentItem());
+				}
+			}
+		});
+		mCursorIndicator = (CursorIndicator) findViewById(R.id.channel_zdy_pager_cursor);
 		mItemAdapter = new ItemAdapter(this);
 		mViewPager.setAdapter(mItemAdapter);
 		
@@ -226,6 +247,7 @@ public class ZhengdyActivity extends FullScreenActivity {
 					count = (len / PAGE_SIZE) + 1;
 				}
 			}
+			mCursorIndicator.setCount(count);
 			return count;
 		}
 
